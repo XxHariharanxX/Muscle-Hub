@@ -1,0 +1,1631 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  min-height: 100vp;
+  font-family: "Poppins", serif;
+  background-color: black;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory; /* Enable snapping on vertical scroll */
+  overflow-y: scroll; /* Allow vertical scrolling */
+}
+/* section {
+  background-image: url("imgs/Home.webp");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
+.homesec{
+  position: relative; /* Needed for positioning the overlay */
+  background-image: url("imgs/Home.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(100vh - 50px);
+  z-index: 0; /* Ensure it’s behind the content */
+  overflow: hidden;
+  scroll-snap-align: start; /* Align each section at the top */
+    
+}
+
+.homesec::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); 
+  z-index: 1; /* Place the overlay above the background but below the content */
+} 
+
+.homepage {
+  position: relative; /* Keeps content above the overlay */
+  z-index: 2; /* Ensures content is above the overlay */
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.568);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  position: relative;
+  z-index: 1000;
+}
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+nav a:hover,a.active {
+  color: #ff6f00;
+}
+
+
+nav li:first-child {
+  margin-right: auto;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.205);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 -10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+}
+.menu-button {
+  display: none;
+}
+
+
+
+.homepage-head-txt {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+}
+
+.big-txt {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-size: 64px;
+  color: white;
+  width: 550px;
+  text-align: center;
+  display: inline;
+  position: absolute;
+  top: 100px;
+  left: 10%;
+  text-transform: capitalize;
+}
+
+/* .homepage {
+  background-image: url("imgs/Home.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+} */
+span {
+  color: #ff6f00;
+}
+
+.img-border {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 19px 18px;
+  gap: 10px;
+
+  position: absolute;
+  width: 457px;
+  height: 527px;
+  left: 65%;
+  top: 150px;
+
+  border: 3px solid #ffffff;
+  box-shadow: 0px 4px 19.3px 1px #000000;
+  border-radius: 30px;
+}
+
+.sub-txt {
+  /* color: white;
+    font-family: "Poppins", serif;
+    font-size: 400;
+    position: absolute;
+    left: 10%;
+    top:600px ;
+    font-size: 24px;
+    display: flex; */
+  /* Join Today and Achieve Your Goals with Muscle Hub! */
+
+  position: absolute;
+  width: 547px;
+  height: 33px;
+  left: 10%;
+  top: 450px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.social-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  flex-basis: 33;
+  background: rgba(33, 33, 33, 0.68);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  width: 540px;
+  height: 60px;
+  position: relative;
+  top: 550px;
+  left: 10%;
+  padding: 15px 15px;
+}
+
+.cirle {
+  /* Ellipse 1 */
+
+  position: absolute;
+  width: 100vw; /* Set width relative to viewport width */
+  height: 100vh; /* Set height relative to viewport height */
+  left: 50%; /* Center horizontally */
+  top: 50%; /* Center vertically */
+  transform: translate(-50%, -50%); /* Adjust to align center */
+  background: #743200;
+  filter: blur(500px);
+  z-index: -2;
+  border-radius: 50%;
+}
+
+/* Frame 19 */
+
+/* Auto layout */
+/* display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px ;
+gap: 10px;
+flex-basis: 33;
+
+position: absolute;
+width: 536px;
+height: 60px;
+left: 99px;
+top: 680px;
+
+background: rgba(33, 33, 33, 0.68);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 50px; */
+
+.social-txt {
+  color: #ff6f00;
+}
+
+.button-container {
+  color: white;
+  display: flex;
+  align-items: center; /* Aligns icon and text vertically */
+  justify-content: center; /* Centers content horizontally if needed */
+  padding: 10px 20px;
+  border: 2px solid #ffffff; /* Adds a border */
+  border-radius: 25px; /* Rounds the corners */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 290px;
+  top: 700px;
+  left: 16%;
+  position: absolute;
+}
+
+.button-container:hover {
+  background-color: #ff6600; /* Adds hover effect */
+  color: white;
+}
+
+.icon {
+  margin-right: 8px; /* Adds space between the icon and text */
+  font-size: 20px; /* Adjusts icon size */
+}
+
+.aboutus-sec {
+  position: relative; /* Needed for positioning the overlay */
+  background-image: url("imgs/aboutus-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  z-index: 0; 
+  overflow: hidden;
+  scroll-snap-align: start; 
+}
+
+
+.aboutus-sec::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); 
+  z-index: 1; /* Place the overlay above the background but below the content */
+} 
+
+.aboutus {
+  position: relative; /* Keeps content above the overlay */
+  z-index: 2; /* Ensures content is above the overlay */
+  display: flex;
+}
+
+ 
+.header-txt {
+  color: #ff6600;
+  position: absolute;
+  top: 210px;
+  font-size: 32px;
+  left: 50%;
+}
+.abt-con {
+  position: absolute;
+  color: white;
+  width: 560px;
+  height: 330px;
+  left: 50%;
+  top: 300px;
+  font-size: 20px;
+}
+
+.img-cont {
+ 
+  width: 546px;
+  height: 376px;
+  position: relative;
+  left: 100px;
+  top: 250px;
+}
+
+.abt-img-1 {
+  border-radius: 30px;
+  position: absolute;
+  width: 236.28px;
+  height: 326.24px;
+  left: 100px;
+  top: 30.36px;
+  background: url(imgs/aboutus1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(-8deg);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ff6f00;
+  
+}
+
+.abt-img-2 {
+  border-radius: 30px;
+  position: absolute;
+  width: 238.2px;
+  height: 318.4px;
+  left: 250px;
+  top: 32.51px;
+  background: url(imgs/aboutus2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(8deg);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ff6f00;
+  
+}
+.cirle-1{
+  position: absolute;
+  width: 98vw; /* Set width relative to viewport width */
+  height: 100vh; /* Set height relative to viewport height */
+  left: 80%; /* Center horizontally */
+  top: 50%; /* Center vertically */
+  transform: translate(-50%, -50%); /* Adjust to align center */
+  background: #743200;
+  filter: blur(500px);
+  z-index: -2;
+  border-radius: 50%;
+
+}
+.learn-btn-cont{
+  position: relative;
+}
+.learn-btn{
+position: absolute;
+width: 122px;
+height: 38px;
+left: 860px;
+top: 400px;
+background-color: transparent;
+ 
+border: 2px solid #FFFFFF;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 25px;
+
+}
+  
+a{
+  text-decoration: none;
+  color: white;
+  
+}
+
+
+.membership-sec {
+  position: relative; /* Needed for positioning the overlay */
+  background-image: url("imgs/mem-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  z-index: 0; 
+  overflow: hidden;
+  scroll-snap-align: start; 
+}
+
+
+.membership-sec::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); 
+  z-index: 1; /* Place the overlay above the background but below the content */
+} 
+
+.memebership {
+  position: relative; /* Keeps content above the overlay */
+  z-index: 2; /* Ensures content is above the overlay */
+  display: flex;
+  justify-content: center;
+}
+
+.mem-headtxt{
+  color: white;
+  font-size: 96px;
+  font-weight: 700;
+  top: 120px;
+}
+.price-cont{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  position: relative;
+  z-index: 3;
+  justify-content: center;
+  top: 100px;
+
+}
+
+.price-cards{
+  
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 43px 32px;
+gap: 50px;
+
+width: 298px;
+height: 500px;
+
+background: rgba(255, 255, 255, 0.19);
+border: 2px solid #FFFFFF;
+box-shadow: 0px 4px 70.4px rgba(0, 0, 0, 0.25);
+border-radius: 0px 25px;
+
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+
+}
+
+.card-head{
+  color: #ff6600;
+  font-size: 40px;
+  font-weight: 700;
+}
+.card-sub{
+  color: white;
+}
+
+.perks{
+  color: #FFFFFF;
+  font: 20px;
+}
+.perk-text{
+  color: #FFFFFF;
+}
+.price-btn{
+position: relative;
+width: 200px;
+height: 38px;
+padding: 10px;
+background-color: #ff6600;
+ 
+border: 2px solid #FFFFFF;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 25px;
+}
+
+.price-btn:hover{
+  background-color: transparent;
+}
+
+.second-card{
+  background-color: #ff6600;
+}
+.second-card .card-head {
+  color: #FFFFFF;
+
+}
+.sec-btn:hover{
+  background-color: white;
+  
+}
+.sec-btn a:hover{
+  color: #ff6600;
+  border-color: #ff6600;
+  border-width: 2px;
+}
+
+
+
+.end-sec {
+  position: relative; /* Needed for positioning the overlay */
+  background-image: url("imgs/end.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  z-index: 0; 
+  overflow: hidden;
+  scroll-snap-align: start; 
+}
+
+
+.end-sec::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); 
+  z-index: 1; /* Place the overlay above the background but below the content */
+} 
+
+.end {
+  position: relative; /* Keeps content above the overlay */
+  z-index: 2; /* Ensures content is above the overlay */
+  display: flex;
+  justify-content: center;
+}
+.end-big-txt{
+  position: relative;
+  font-size: 64px;
+  font-weight: 800;
+  color: white;
+  width: 1100px;
+  top: 60px;
+  text-align: center;
+}
+.end-btn{
+  border-color: #ff6f00;
+  color: #ff6600;
+ top: 400px;
+ left: 42%;
+ background-color: transparent;
+ height: 60px;
+
+ 
+ 
+}
+i{
+  color: white;
+}
+
+.footer-loc-contents{
+  display: flex;
+  justify-content: center;
+}
+
+.footer-cont{
+  width: 100vw;
+  height: 340px;
+  background-color: rgba(30, 30, 30, 0.75);
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  bottom: 50px;
+  flex-direction: row;
+  align-items:center;
+  justify-content: center;
+ padding: 0px 23px;
+ gap: 16px;
+
+}
+
+.loc-contact{
+  width: 385px;
+  height: 291px;
+  position: relative;
+}
+.loc-contact h3{
+  color: #FFFFFF;
+  font-size: 24;
+  font-weight:800 ;
+  left: 3%;
+  position: relative;
+  text-transform: uppercase;
+}
+.loc-contact ul{
+  list-style-type: none;
+}
+.loc-contact li{
+  padding: 10px;
+  color: #FFFFFF;
+  font-size: 16;
+  font-weight: 400;
+}
+.loc-contact span{
+  font-size: 16;
+  font-weight: 700;
+
+}
+
+.orange-line{
+background-color: #ff6600;
+position: relative;
+width: 5px;
+margin: 10px;
+}
+.loc-quick-link{
+  width: 250px;
+  height: 291px;
+  position: relative;
+  align-items: center;
+  
+  
+}
+
+.loc-quick-header{
+  color: #FFFFFF;
+  font-size: 24;
+  font-weight:800 ;
+  left: 3%;
+  position: relative;
+  width: 300px;
+  text-transform: uppercase;
+
+
+
+}
+.loc-quick-link ul{
+  list-style-type: none;
+  position: relative;
+  top: 30px;
+  left: 2%;
+}
+
+.loc-quick-link li{
+  padding: 10px;
+  color: #FFFFFF;
+  font-size: 16;
+  font-weight: 400;
+}
+.loc-quick-link span{
+  font-size: 16;
+  font-weight: 700;
+
+}
+.loc-last{
+  
+  width: 385px;
+  height: 291px;
+  position: relative;
+}
+.loc-last p{
+  color: white;
+  padding: 10px;
+}
+
+.loc-social-link{
+  width: 250px;
+  height: 291px;
+  position: relative;
+
+}
+
+.loc-social-header{
+  color: #FFFFFF;
+  font-size: 24;
+  font-weight:800 ;
+  left: 3%;
+  position: relative;
+  width: 300px;
+  text-transform: uppercase;
+
+
+
+}
+.loc-social-link ul{
+  list-style-type: none;
+  position: relative;
+  top: 30px;
+  left: 2%;
+}
+
+.loc-social-link li{
+  padding: 10px;
+  color: #FFFFFF;
+  font-size: 16;
+  font-weight: 400;
+}
+.loc-social-link span{
+  font-size: 16;
+  font-weight: 700;
+
+}
+.loc-last{
+  
+  width: 385px;
+  height: 291px;
+  position: relative;
+}
+.loc-last p{
+  color: white;
+  padding: 10px;
+}
+
+.white-line{
+  background-color: #ffffff;
+position: relative;
+width: 2px;
+margin: 10px;
+}
+.copyright-txt{
+  color: rgba(255, 255, 255, 0.5);
+  position:absolute;
+  z-index: 2;
+  text-align: center;
+  align-items: center;
+  bottom: 10px;
+  left: 30%;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+
+  .homepage-head-txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .big-txt {
+    position: absolute;
+    align-items: center;
+    left: 15%;
+    top: 150px;
+  }
+  .sub-txt {
+    position: absolute;
+    width: 500px;
+    height: 33px;
+    left: 19%;
+    top: 500px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .social-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    flex-basis: 33;
+    background: rgba(33, 33, 33, 0.68);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    width: 500px;
+    height: 60px;
+    position: relative;
+    top: 600px;
+    left: 15%;
+    padding: 10px 10px;
+  }
+
+  .img-border {
+    display: none;
+  }
+
+  .button-container {
+    position: absolute;
+    top: 700px;
+    left: 28%;
+  }
+
+  .img-cont{
+    display: none;
+  }
+  .header-txt {
+    color: #ff6600;
+    position: absolute;
+    top: 210px;
+    font-size: 32px;
+    left: 20%;
+  }
+
+  .abt-con {
+    position: absolute;
+    color: white;
+    width: 560px;
+    height: 330px;
+    left: 20%;
+    top: 300px;
+    font-size: 20px;
+  }
+  .learn-btn-cont{
+    position: relative;
+    top: 700px;
+    left: 28%;
+  }
+  .learn-btn{
+  position: absolute;
+  width: 122px;
+  height: 38px;
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 25px;
+  
+  }
+
+
+  .mem-headtxt{
+    font-size: 65px;
+  }
+
+  .price-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+    z-index: 3;
+    justify-content: center;
+    top: 100px;
+    width: 600px;
+    align-items: center;
+
+
+     display: flex;
+    flex-direction: column;
+    gap: 50px;
+    z-index: 3; /* Keep this if layering is needed */
+    justify-content: center; /* Vertical alignment within .price-cont */
+    align-items: center; /* Horizontal alignment within .price-cont */
+    width: 600px;
+    left: 10%;
+  
+  }
+
+  .membership-sec{
+    height: 200vh;
+   
+    
+  }
+
+
+  .price-cards{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 43px 32px;
+    gap: 20px;
+    
+    width: 300px;
+    height: 400px;
+    
+    background: rgba(255, 255, 255, 0.19);
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 4px 70.4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 25px;
+    
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    
+    }
+
+
+    .card-head{
+      color: #ff6600;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .card-sub{
+      color: white;
+    }
+    
+    .perks{
+      color: #FFFFFF;
+      font: 20px;
+    }
+    .perk-text{
+      color: #FFFFFF;
+    }
+    .price-btn{
+    position: relative;
+    width: 200px;
+    height: 38px;
+    padding: 10px;
+    background-color: #ff6600;
+     
+    border: 2px solid #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 25px;
+    }
+
+    .second-card{
+      background-color: #ff6600;
+    }
+    .second-card .card-head {
+      color: #FFFFFF;
+    
+    }
+    .sec-btn:hover{
+      background-color: white;
+      
+    }
+    .sec-btn a:hover{
+      color: #ff6600;
+      border-color: #ff6600;
+      border-width: 2px;
+    }
+
+    .end-sec {
+      position: relative; /* Needed for positioning the overlay */
+      background-image: url("imgs/end.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 90vh;
+      z-index: 0; 
+      overflow: hidden;
+      scroll-snap-align: start; 
+    }
+    
+    
+    .end-sec::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px); 
+      z-index: 1; /* Place the overlay above the background but below the content */
+    } 
+    
+    .end {
+      position: relative; /* Keeps content above the overlay */
+      z-index: 2; /* Ensures content is above the overlay */
+      display: flex;
+      justify-content: center;
+    }
+    .end-big-txt{
+      position: relative;
+      font-size: 50px;
+      font-weight: 800;
+      color: white;
+      width: 800px;
+      top: 60px;
+      text-align: center;
+    }
+    .end-btn{
+      border-color: #ff6f00;
+      color: #ff6600;
+     top: 400px;
+     left: 35%;
+     background-color: transparent;
+     height: 60px;
+    
+     
+     
+    }
+    i{
+      color: white;
+    }
+    
+    .footer-loc-contents{
+      display: flex;
+      justify-content: space-evenly;
+      width: 1000px;
+      flex-direction: row;
+      
+    }
+    
+    .footer-cont{
+      width: 100vw;
+      height: 400px;
+      background-color: rgba(30, 30, 30, 0.75);
+      z-index: 2;
+      position: absolute;
+      display: flex;
+      bottom: 50px;
+      flex-direction: row;
+      align-items:center;
+      justify-content: space-evenly;
+      padding: 0px 23px;
+      gap: 16px;
+      top: 500px;
+      
+      
+    
+    }
+    
+    .loc-contact{
+      width: 500px;
+      height: 200px;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .loc-contact h3{
+      color: #FFFFFF;
+      font-size: 10;
+      font-weight:700 ;
+      left: 3%;
+      position: relative;
+      text-transform: uppercase;
+    }
+    .loc-contact ul{
+      list-style-type: none;
+    }
+    .loc-contact li{
+      padding: 10px;
+      color: #FFFFFF;
+      font-size: 12;
+      font-weight: 400;
+    }
+    .loc-contact span{
+      font-size: 16;
+      font-weight: 700;
+    
+    }
+    
+    .orange-line{
+    background-color: #ff6600;
+    position: relative;
+    width: 5px;
+    margin: 10px;
+    }
+    .loc-quick-link{
+      width: 200px;
+      height: 291px;
+      position: relative;
+      align-items: center;
+      
+      
+    }
+    
+    .loc-quick-header{
+      color: #FFFFFF;
+      font-size: 24;
+      font-weight:800 ;
+      left: 3%;
+      position: relative;
+      width: 300px;
+      text-transform: uppercase;
+    
+    
+    
+    }
+    .loc-quick-link ul{
+      list-style-type: none;
+      position: relative;
+      top: 30px;
+      left: 2%;
+    }
+    
+    .loc-quick-link li{
+      padding: 10px;
+      color: #FFFFFF;
+      font-size: 16;
+      font-weight: 600;
+    }
+    .loc-quick-link span{
+      font-size: 16;
+      font-weight: 700;
+    
+    }
+    /* .loc-last{
+      
+      width: 200px;
+      height: 291px;
+      position: relative;
+    } */
+    .loc-last p{
+      color: white;
+      padding-right: 20px;
+    }
+    
+    .loc-social-link{
+      width: 150px;
+      height: 291px;
+      position: relative;
+    
+    }
+    
+    .loc-social-header{
+      color: #FFFFFF;
+      font-size: 24;
+      font-weight:800 ;
+      left: 3%;
+      position: relative;
+      width: 300px;
+      text-transform: uppercase;
+    
+    
+    
+    }
+    .loc-social-link ul{
+      list-style-type: none;
+      position: relative;
+      top: 30px;
+      left: 2%;
+    }
+    
+    .loc-social-link li{
+      padding: 10px;
+      color: #FFFFFF;
+      font-size: 16;
+      font-weight: 400;
+    }
+    .loc-social-link span{
+      font-size: 16;
+      font-weight: 700;
+    
+    }
+    .loc-last{
+      
+      width: 400px;
+      height: 291px;
+      position: relative;
+      
+    }
+    .loc-last p{
+      color: white;
+      padding: 10px;
+    }
+    
+    .white-line{
+      background-color: #ffffff;
+    position: relative;
+    width: 2px;
+    margin: 5px;
+    }
+    .copyright-txt{
+      color: rgba(255, 255, 255, 0.5);
+      position:absolute;
+      z-index: 2;
+      text-align: center;
+      align-items: center;
+      bottom: 10px;
+      left: 30%;
+    }
+
+
+    
+
+}
+
+@media (max-width: 412px) {
+  .sidebar {
+    width: 100%;
+  }
+
+  .big-txt {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-size: 50px;
+    color: white;
+    width: 300px;
+    text-align: left;
+    display: inline;
+    position: relative;
+    top: 17%;
+    left: 10px;
+
+    text-transform: capitalize;
+  }
+  .sub-txt {
+    position: absolute;
+    width: 300px;
+    height: 33px;
+    left: 10%;
+    top: 450px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .social-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    flex-basis: 33;
+    background: rgba(33, 33, 33, 0.68);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    width: 300px;
+    height: 60px;
+    position: relative;
+    top: 200px;
+    left: 11%;
+    padding: 10px 10px;
+  }
+
+  .social-txt {
+    color: #ff6f00;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .button-container {
+    position: absolute;
+    top: 700px;
+    left: 28%;
+    width: 150px;
+  }
+
+  .header-txt {
+    color: #ff6600;
+    position: absolute;
+    top: 100px;
+    font-size: 32px;
+    left: 15%;
+  }
+
+  .abt-con {
+    position: absolute;
+    color: white;
+    width: 300px;
+    height: 330px;
+    left: 20%;
+    top: 200px;
+    font-size: 20px;
+  }
+
+
+  .mem-headtxt{
+    font-size: 30px;
+    position: relative;
+    top: 30px;
+  }
+
+  .price-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+    z-index: 3;
+    justify-content: center;
+    top: 100px;
+    width: 300px;
+    align-items: center;
+
+
+     display: flex;
+    flex-direction: column;
+    gap: 50px;
+    z-index: 3; /* Keep this if layering is needed */
+    justify-content: center; /* Vertical alignment within .price-cont */
+    align-items: center; /* Horizontal alignment within .price-cont */
+    width: 400px;
+    left: 10px;
+  
+  }
+
+
+  .price-cards{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 43px 32px;
+    gap: 20px;
+    
+    width: 250px;
+    height: 400px;
+    
+    background: rgba(255, 255, 255, 0.19);
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 4px 70.4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 25px;
+    
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    
+    }
+
+
+    .card-head{
+      color: #ff6600;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .card-sub{
+      color: white;
+    }
+    
+    .perks{
+      color: #FFFFFF;
+      font: 20px;
+    }
+    .perk-text{
+      color: #FFFFFF;
+    }
+    .price-btn{
+    position: relative;
+    width: 200px;
+    height: 38px;
+    padding: 10px;
+    background-color: #ff6600;
+     
+    border: 2px solid #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 25px;
+    }
+
+    .second-card{
+      background-color: #ff6600;
+    }
+    .second-card .card-head {
+      color: #FFFFFF;
+    
+    }
+    .sec-btn:hover{
+      background-color: white;
+      
+    }
+    .sec-btn a:hover{
+      color: #ff6600;
+      border-color: #ff6600;
+      border-width: 2px;
+    }
+
+    .end-sec {
+      position: relative; /* Needed for positioning the overlay */
+      background-image: url("imgs/end.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 2000px;
+      z-index: 0; 
+      
+      scroll-snap-align: start; 
+    }
+    
+    
+    .end-sec::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px); 
+      z-index: 1; /* Place the overlay above the background but below the content */
+    } 
+    
+    .end {
+      position: relative; /* Keeps content above the overlay */
+      z-index: 2; /* Ensures content is above the overlay */
+      display: flex;
+      justify-content: center;
+    }
+    .end-big-txt{
+      position: relative;
+      font-size: 40px;
+      font-weight: 800;
+      color: white;
+      width: 350px;
+      top: 60px;
+      text-align: center;
+    }
+    .end-btn{
+      border-color: #ff6f00;
+      color: #ff6600;
+     top: 400px;
+     left: 28%;
+     background-color: transparent;
+     height: 60px;
+     width: 200px;
+     top: 500px;
+    
+     
+     
+    }
+    i{
+      color: white;
+    }
+    
+    .footer-loc-contents{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      
+    }
+    
+    .footer-cont{
+      width: 100vw;
+      height: 1250px;
+      background-color: rgba(30, 30, 30, 0.75);
+      z-index: 2;
+      position: absolute;
+      display: flex;
+      bottom: 100px;
+      flex-direction: column;
+      align-items:center;
+      justify-content: center;
+     padding: 0px 23px;
+     gap: 16px;
+     flex-wrap: wrap;
+     top: 600px;
+    
+    }
+    
+    .loc-contact{
+      width: 385px;
+      height: 291px;
+      position: relative;
+    }
+    .loc-contact h3{
+      color: #FFFFFF;
+      font-size: 15;
+      font-weight:800 ;
+      left: 3%;
+      position: relative;
+      text-transform: uppercase;
+    }
+    .loc-contact ul{
+      list-style-type: none;
+    }
+    .loc-contact li{
+      padding: 10px;
+      color: #FFFFFF;
+      font-size: 13;
+      font-weight: 400;
+    }
+    .loc-contact span{
+      font-size: 16;
+      font-weight: 700;
+    
+    }
+    
+    .orange-line{
+    background-color: #ff6600;
+    position: relative;
+    width: 5px;
+    margin: 10px;
+    }
+    .loc-quick-link{
+      width: 250px;
+      height: 291px;
+      position: relative;
+      align-items: center;
+      
+      
+    }
+    
+    .loc-quick-header{
+      color: #FFFFFF;
+      font-size: 14;
+      font-weight:800 ;
+      left: 3%;
+      position: relative;
+      width: 300px;
+      text-transform: uppercase;
+    
+    
+    
+    }
+    .loc-quick-link ul{
+      list-style-type: none;
+      position: relative;
+      top: 30px;
+      left: 2%;
+    }
+    
+    .loc-quick-link li{
+      padding: 10px;
+      color: #FFFFFF;
+      font-size: 16;
+      font-weight: 400;
+    }
+    .loc-quick-link span{
+      font-size: 14;
+      font-weight: 700;
+    
+    }
+    .loc-last{
+      
+      width: 385px;
+      height: 291px;
+      position: relative;
+    }
+    .loc-last p{
+      color: white;
+      padding: 10px;
+    }
+    
+    .loc-social-link{
+      width: 250px;
+      height: 291px;
+      position: relative;
+    
+    }
+    
+    .loc-social-header{
+      color: #FFFFFF;
+      font-size: 15;
+      font-weight:800 ;
+      left: 3%;
+      position: relative;
+      width: 300px;
+      text-transform: uppercase;
+    
+    
+    
+    }
+    .loc-social-link ul{
+      list-style-type: none;
+      position: relative;
+      top: 30px;
+      left: 2%;
+    }
+    
+    .loc-social-link li{
+      padding: 10px;
+      color: #FFFFFF;
+      font-size: 14;
+      font-weight: 400;
+    }
+    .loc-social-link span{
+      font-size: 14;
+      font-weight: 700;
+    
+    }
+    .loc-last{
+      
+      width: 385px;
+      height: 291px;
+      position: relative;
+    }
+    .loc-last p{
+      color: white;
+      padding: 10px;
+    }
+    
+    .white-line{
+      background-color: #ffffff;
+    position: relative;
+    width: 2px;
+    margin: 10px;
+    }
+    .copyright-txt{
+      color: rgba(255, 255, 255, 0.5);
+      position:absolute;
+      z-index: 2;
+      text-align: center;
+      align-items: center;
+      bottom: 75px;
+      width: 400px;
+      left: 10px;
+      font-size: 12px;
+     
+    }
+
+      
+
+
+}
